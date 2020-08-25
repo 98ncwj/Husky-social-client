@@ -1,3 +1,23 @@
+# Husky-social-func
+
+Simple Twitter clone (Backend) 
+
+functions:
+
+-edit personal profile (change images)
+
+-post a scream
+
+-like other persons scream
+
+-comment on scream
+
+-delete scream
+
+-receive notifications when someone likes or comments on your scream
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
