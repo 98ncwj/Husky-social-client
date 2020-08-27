@@ -13,14 +13,18 @@ import { SET_AUTHENTICATED } from "./redux/types";
 import { logoutUser, getUserData } from "./redux/actions/userActions";
 
 //components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import AuthRoute from "./util/AuthRoute";
 
 //pages
 import home from "./pages/home";
 import login from "./pages/login";
+import user from "./pages/user";
 import signup from "./pages/signup";
 import axios from "axios";
+
+axios.defaults.baseURL =
+  "https://australia-southeast1-social-bc15d.cloudfunctions.net/api";
 
 const theme = createMuiTheme(themeFile);
 
@@ -50,6 +54,12 @@ class App extends Component {
                 <Route exact path="/" component={home} />
                 <AuthRoute exact path="/login" component={login} />
                 <AuthRoute exact path="/signup" component={signup} />
+                <Route exact path="/users/:handle" component={user} />
+                <Route
+                  exact
+                  path="/users/:handle/scream/:screamId"
+                  component={user}
+                />
               </Switch>
             </div>
           </Router>

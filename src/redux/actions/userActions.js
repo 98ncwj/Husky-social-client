@@ -5,6 +5,7 @@ import {
   LOADING_UI,
   SET_UNAUTHENTICATED,
   LOADING_USER,
+  MARK_NOTIFICATIONS_READ,
 } from "../types";
 import axios from "axios";
 
@@ -86,4 +87,13 @@ export const editUserDetails = (userDetails) => (dispatch) => {
     .catch((err) => {
       console.log(err);
     });
+};
+
+export const markNotificationsRead = (notificaionIds) => (dispatch) => {
+  axios
+    .post("/notifications", notificaionIds)
+    .then((res) => {
+      dispatch({ type: MARK_NOTIFICATIONS_READ });
+    })
+    .catch((err) => console.log(err));
 };
