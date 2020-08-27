@@ -139,7 +139,7 @@ class Profile extends Component {
         </Paper>
       )
     ) : (
-      <profileSkeleton />
+      <ProfileSkeleton />
     );
 
     return profileMarkup;

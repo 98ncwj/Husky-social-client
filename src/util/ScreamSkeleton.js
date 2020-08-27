@@ -19,8 +19,10 @@ const styles = (theme) => ({
     padding: 25,
   },
   cover: {
-    midWidth: 500,
+    width: 200,
+    height: 200,
     objectFit: "cover",
+    maxWidth: "100%",
   },
   handle: {
     width: 60,
